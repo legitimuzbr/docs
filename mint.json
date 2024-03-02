@@ -8,49 +8,27 @@
   "favicon": "/favicon.svg",
   "colors": {
     "primary": "#FF7F66",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "light": "#FF7F66",
+    "dark": "#FF7F66",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#FF7F66",
+      "to": "#FF7F66"
     }
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "Suporte",
+      "url": "mailto:suporte@legitimuz.com"
     }
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://dashboard.legitimuz.com/dashboard"
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
-    }
-  ],
+  
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Introdução",
       "pages": [
         "introduction",
         "quickstart",
@@ -58,7 +36,7 @@
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Documentação SDK",
       "pages": [
         "essentials/markdown",
         "essentials/code",
@@ -69,13 +47,7 @@
       ]
     },
     {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
+      "group": "Documentação API",
       "pages": [
         "api-reference/endpoint/get",
         "api-reference/endpoint/create",
