@@ -25,7 +25,16 @@
     "name": "Dashboard",
     "url": "https://dashboard.legitimuz.com/dashboard"
   },
-  
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    },
+    {
+      "name": "SDK Reference",
+      "url": "sdk-reference"
+    }
+  ],
   "navigation": [
     {
       "group": "Introdução",
@@ -55,6 +64,7 @@
       ]
     }
   ],
+  
   "footerSocials": {
     "instagram": "https://www.instagram.com/legitimuz.br",
     "linkedin": "https://www.linkedin.com/company/legitimuzbr/",
