@@ -2,11 +2,11 @@
 <svg
    id="Camada_1"
    data-name="Camada 1"
-   viewBox="0 0 999.99998 999.99998"
+   viewBox="0 0 200 199.285"
    version="1.1"
-   sodipodi:docname="SIMBOLO V1 (1).svg"
-   width="1000"
-   height="1000"
+   sodipodi:docname="teste.svg"
+   width="200"
+   height="199.285"
    inkscape:version="1.3 (0e150ed, 2023-07-21)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -21,9 +21,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.092185698"
-     inkscape:cx="401.36378"
-     inkscape:cy="238.64873"
+     inkscape:zoom="0.32564761"
+     inkscape:cx="-168.89422"
+     inkscape:cy="122.83216"
      inkscape:window-width="1504"
      inkscape:window-height="449"
      inkscape:window-x="0"
@@ -37,7 +37,7 @@
   </defs>
   <g
      id="g9"
-     transform="matrix(0.56038058,0,0,0.56038058,-217.29756,-217.29783)">
+     transform="matrix(0.11207612,0,0,0.11207612,-43.459517,-43.817069)">
     <path
        class="cls-1"
        d="m 968.17,795.62 c -0.32,-55.11 -70.48,-81 -109.66,-41.06 -153.44,145.05 -266.4,242.79 -438.34,277.8 -11.85,41.96 -20.76,84.82 -26.42,128.29 207.13,-20.84 489.5,-198.02 574.42,-365.03 z"
