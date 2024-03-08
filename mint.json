@@ -27,12 +27,12 @@
   },
   "tabs": [
     {
-      "name": "API Reference",
-      "url": "api-reference"
-    },
-    {
       "name": "SDK Reference",
       "url": "sdk-reference"
+    },
+    {
+      "name": "API Reference",
+      "url": "api-reference"
     }
   ],
   "navigation": [
@@ -45,7 +45,7 @@
       ]
     },
     {
-      "group": "Documentação SDK",
+      "group": "Essenciais",
       "pages": [
         "essentials/markdown",
         "essentials/code",
@@ -53,6 +53,25 @@
         "essentials/settings",
         "essentials/navigation",
         "essentials/reusable-snippets"
+      ]
+    },
+    {
+      "group": "Legitimuz SDK",
+      "pages": [
+        "sdk-reference/legitimuz/introduction",
+        "sdk-reference/legitimuz/instalation",
+        "sdk-reference/legitimuz/options",
+        "sdk-reference/legitimuz/methods",
+        "sdk-reference/legitimuz/fields",
+        "sdk-reference/legitimuz/actions",
+        {
+          "group": "Serviços",
+          "pages": [
+            "sdk-reference/legitimuz/ocr-facematch",
+            "sdk-reference/legitimuz/enrichment",
+            "sdk-reference/legitimuz/address-enrichment"
+          ]
+        }
       ]
     },
     {
@@ -64,7 +83,6 @@
       ]
     }
   ],
-  
   "footerSocials": {
     "instagram": "https://www.instagram.com/legitimuz.br",
     "linkedin": "https://www.linkedin.com/company/legitimuzbr/",
