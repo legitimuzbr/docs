@@ -1,0 +1,38 @@
+---
+title: 'Lista de Campos'
+description: 'Os campos abaixo são os campos que o Legitimuz SDK irá preencher automaticamente basedo no CPF informado no campo cpf'
+icon: 'list'
+---
+
+| Nome | [ID do elemento](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes/id) | Obrigatório | Descrição                                                                                                                  |
+| :------------ | :--------------------------------------------------------------------------- | :---------: | :------------------------------------------------------------------------------------------------------------------------- |
+| cpf           | legitimuz-hydrate-cpf |     Sim     | Usado para fazer o [enriquecido de dados pessoais](/sdk-reference/legitimuz/enrichment) e [validação OCR + Facematch](/sdk-reference/legitimuz/ocr-facematch). |
+| name          | legitimuz-hydrate-name |     Não     | `Nome` Encontrado com base no CPF. |
+| motherName    | legitimuz-hydrate-motherName |     Não     | `Nome da Mãe` Encontrado com base no CPF. |
+| email         | legitimuz-hydrate-email |     Não     | `E-Mail` Encontrado com base no CPF. |
+| phone         | legitimuz-hydrate-phone |     Não     | `Telefone` Encontrado com base no CPF. |
+| birthdate     | legitimuz-hydrate-birthdate |     Não     | `Data de nascimento` Encontrado com base no CPF. |
+| age           | legitimuz-hydrate-age |     Não     | `Idade` Encontrado com base no CPF. |
+| gender        | legitimuz-hydrate-gender |     Não     | `Sexo` Encontrado com base no CPF. |
+| nationality   | legitimuz-hydrate-nationality |     Não     | `Nacionalidade` Encontrado com base no CPF. |
+| sign          | legitimuz-hydrate-sign |     Não     | `Signo` Encontrado com base no CPF. |
+
+## [Endereço](#address)
+
+| Nome | [ID do elemento](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes/id) | Obrigatório | Descrição |
+| :--- | :--------------------------------------------------------------------------------------- | :---------: | :-------- |
+| zipCode       | legitimuz-hydrate-zipCode | Apenas para o [enriquecido de endereço](/sdk-reference/legitimuz/address-enrichment) | `CEP` Encontrado com base no CPF. |
+| address       | legitimuz-hydrate-address | Não | `Endereço` Encontrado com base no CPF ou no valor digitado no campo `zipCode`. |
+| addressNumber | legitimuz-hydrate-addressNumber | Não | `Número` Encontrado com base no CPF ou no valor digitado no campo `zipCode`. |
+| neighborhood  | legitimuz-hydrate-neighborhood | Não | `Bairro` Encontrado com base no CPF ou no valor digitado no campo `zipCode`. |
+| complement    | legitimuz-hydrate-complement | Não | `Complemento` Encontrado com base no CPF ou no valor digitado no campo `zipCode`. |
+| city          | legitimuz-hydrate-city | Não | `Cidade` Encontrado com base no CPF ou no valor digitado no campo `zipCode`.      |
+| state         | legitimuz-hydrate-state | Não | `Estado(UF)` Encontrado com base no CPF ou no valor digitado no campo `zipCode`.  |
+
+## [Outros](#others)
+
+| Nome | [ID do elemento](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes/id) | Obrigatório | Descrição                                                                                                  |
+| :------------ | :--------------------------------------------------------------------------- | :---------: | :--------------------------------------------------------------------------------------------------------- |
+| referenceId   | legitimuz-ref-id                                                             |     Não     | Use para quando quiser adicionar um identificador para uma [validação OCR + Facematch](/sdk-reference/legitimuz/ocr-facematch). |
+
+

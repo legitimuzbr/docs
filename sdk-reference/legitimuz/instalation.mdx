@@ -1,0 +1,51 @@
+---
+title: 'Instalação'
+description: 'Esse é seu guia de instalação'
+icon: 'heart'
+---
+
+### Exemplo
+
+Para instalar o Legitimuz SDK em seu projeto, copie e cole o código abaixo na página que deseja utilizar o SDK.
+
+```html HTML
+<div id="legitimuz-root"></div>
+<script src="https://cdn.legitimuz.com/js/sdk/legitimuz-sdk.js"></script>
+<script lang="text/javascript">
+  const sdkInstance = Legitimuz({
+    host: "https://api.legitimuz.com",
+    token: "seu-token-de-integração",
+  });
+
+  sdkInstance.mount();
+</script>
+```
+
+### Uso
+
+Antes de implementar o código a seguir, é importante garantir que a página
+contenha os elementos HTML necessários.
+O Legitimuz SDK requer um elemento de entrada [input](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/Input)
+com o atributo [id](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes/id) definido
+como [legitimuz-hydrate-cpf](/sdk-reference/legitimuz/fields).
+Este elemento é usado para a entrada do CPF.
+
+```html
+<input id="legitimuz-hydrate-cpf" type="tel" max-length="11" />
+```
+
+Além disso, para utilizar o serviço de verificação de OCR + Facematch, você
+deve incluir um botão [button](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/button)
+com o atributo id definido como [legitimuz-action-verify](/sdk-reference/legitimuz/actions).
+Esse botão é essencial para iniciar o processo de verificação.
+
+<Warning>
+  Certifique-se de que esses elementos estejam presentes na página antes de
+  prosseguir com a implementação do código acima.
+</Warning>
+
+<Tip>
+  Se seu código possue um padrão de escrita diferente?
+  fique tranquilo, você pode alterar o seletor dos elementos através dos [métodos](/sdk-reference/legitimuz/actions)
+  exportados pelo SDK.
+</Tip>
