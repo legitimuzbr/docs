@@ -5,13 +5,23 @@ icon: 'sliders'
 ---
 
 <ResponseField
-  name="host"
+  name="apiURL"
   type="string"
   required
 >
-  O host é o endereço da Legitimuz API.
+  É o endereço da Legitimuz API.
 
   Exemplo: `https://api.legitimuz.com`
+</ResponseField>
+
+<ResponseField
+  name="appURL"
+  type="string"
+  required
+>
+  É o endereço do Legitimuz Verify.
+
+  Exemplo: `https://liveness.legitimuz.com`
 </ResponseField>
 
 <ResponseField
@@ -29,36 +39,18 @@ icon: 'sliders'
   type="string: pt | en | es"
   default="pt"
 >
-  A opção lang é o idioma que será utilizado no fluxo de [validação OCR + Facematch](/sdk-reference/legitimuz/ocr-facematch).
+  A opção lang é o idioma que será utilizado no fluxo de [Face Index](./introduction).
 </ResponseField>
 
-<ResponseField
-  name="enableRedirect"
-  type="boolean"
-  default="false"
->
-  A opção enableRedirect é um booleano que define se após o fluxo de
-  [validação OCR + Facematch](/sdk-reference/legitimuz/ocr-facematch)
-  o usuário será redirecionado para o link cadastrado no `Dashboard Legitimuz`.
-</ResponseField>
 
-<ResponseField
-  name="autoOpenValidation"
-  type="boolean"
-  default="false"
->
-  A opção autoOpenValidation é um booleano que define se o `popup` de
-  de [validação OCR + Facematch](/sdk-reference/legitimuz/ocr-facematch) será aberto automaticamente
-  após a entrada de valor no [input](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/Input)
-  de [cpf](/sdk-reference/legitimuz/fields).
-</ResponseField>
+{/* Refatora essa parte de baixo */}
 
 <ResponseField
   name="onSuccess"
-  type="function: (eventName: 'ocr' | 'facematch'): void"
+  type="function: (eventName: 'faceindex'): void"
 >
   O callback de sucesso é chamado quando ocorre `sucesso` em alguma etapa do fluxo
-  de [validação OCR + Facematch](/sdk-reference/legitimuz/ocr-facematch).
+  de [Face Index](./introduction).
   Como parâmetro, é passado uma [string](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String)
   com a etapa que ocorreu sucesso.
 
@@ -67,12 +59,12 @@ icon: 'sliders'
   <CodeGroup>
     ```html HTML
     <div id="legitimuz-root"></div>
-    <script src="https://cdn.legitimuz.com/js/sdk/legitimuz-sdk.js"></script>
+    <script src="https://cdn.legitimuz.com/js/sdk/faceindex.js"></script>
     <script type="text/javascript">
-      const sdkInstance = Legitimuz({
+      const sdkInstance = LegitimuzFaceIndex({
         /* opções */
         onSuccess(eventName) {
-          console.log(eventName); // ocr | facematch
+          console.log(eventName); // faceindex
         },
       });
 
@@ -87,10 +79,10 @@ icon: 'sliders'
       const sdkInstance = useRef(null);
 
       const handleOnLoadSDK = () => {
-        sdkInstance.current = Legitimuz({
+        sdkInstance.current = LegitimuzFaceIndex({
           /* options */
           onSuccess(eventName) {
-            console.log(eventName); // ocr | facematch
+            console.log(eventName); // faceindex
           },
         });
 
@@ -101,7 +93,7 @@ icon: 'sliders'
         <>
           <input id="legitimuz-hydrate-cpf" type="tel" />
           <script
-            src="https://cdn.legitimuz.com/js/sdk/legitimuz-sdk.js"
+            src="https://cdn.legitimuz.com/js/sdk/faceindex.js"
             onLoad={handleOnLoadSDK}
           ></script>
         </>
@@ -114,11 +106,11 @@ icon: 'sliders'
 
 <ResponseField
   name="onError"
-  type="function: (eventName: 'ocr' | 'facematch'): void"
+  type="function: (eventName: 'faceindex'): void"
 >
   O callback de erro é chamado quando ocorre `erro` em alguma etapa do fluxo de
-  [validação OCR + Facematch](/sdk-reference/legitimuz/ocr-facematch).
-  Como parâmetro, é passado uma [`string`](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String)
+  [Face Index](./introduction).
+  Como parâmetro, é passado uma [string](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String)
   com a etapa que ocorreu erro.
 
   Exemplos:
@@ -126,12 +118,12 @@ icon: 'sliders'
   <CodeGroup>
     ```html HTML
     <div id="legitimuz-root"></div>
-    <script src="https://cdn.legitimuz.com/js/sdk/legitimuz-sdk.js"></script>
+    <script src="https://cdn.legitimuz.com/js/sdk/faceindex.js"></script>
     <script type="text/javascript">
-      const sdkInstance = Legitimuz({
+      const sdkInstance = LegitimuzFaceIndex({
         /* opções */
         onError(eventName) {
-          console.log(eventName); // ocr | facematch
+          console.log(eventName); // faceindex
         },
       });
 
@@ -146,10 +138,10 @@ icon: 'sliders'
       const sdkInstance = useRef(null);
 
       const handleOnLoadSDK = () => {
-        sdkInstance.current = Legitimuz({
+        sdkInstance.current = LegitimuzFaceIndex({
           /* options */
           onError(eventName) {
-            console.log(eventName); // ocr | facematch
+            console.log(eventName); // faceindex
           },
         });
 
@@ -160,7 +152,7 @@ icon: 'sliders'
         <>
           <input id="legitimuz-hydrate-cpf" type="tel" />
           <script
-            src="https://cdn.legitimuz.com/js/sdk/legitimuz-sdk.js"
+            src="https://cdn.legitimuz.com/js/sdk/faceindex.js"
             onLoad={handleOnLoadSDK}
           ></script>
         </>

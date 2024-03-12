@@ -1,0 +1,126 @@
+---
+title: 'Métodos'
+description: 'Vejá como customizar ainda mais o SDK'
+icon: 'bolt'
+---
+
+<ResponseField
+  name="mount"
+  type="function(): void"
+>
+  É responsável por iniciar o SDK e deve ser chamado após a configuração.
+
+  Exemplo:
+
+  ```html HTML
+  <div id="legitimuz-root"></div>
+  <script src="https://cdn.legitimuz.com/js/sdk/faceindex.js"></script>
+  <script type="text/javascript">
+    const sdkInstance = LegitimuzFaceIndex({
+      /* ...opções */
+    });
+
+    // Iniciar SDK
+    sdkInstance.mount();
+  </script>
+  ```
+</ResponseField>
+
+<ResponseField
+  name="setLang"
+  type="function(lang: 'pt' | 'en' | 'es'): void"
+>
+  É responsável por alterar o idioma do fluxo de [Face Index](/introduction).
+
+  Exemplo:
+
+  <CodeGroup>
+    ```html HTML
+    <div id="legitimuz-root"></div>
+    <script src="https://cdn.legitimuz.com/js/sdk/faceindex.js"></script>
+    <script type="text/javascript">
+      const sdkInstance = LegitimuzFaceIndex({
+        /* ...opções */
+      });
+
+      // Iniciar SDK
+      sdkInstance.mount();
+
+      // Alterar idioma
+      sdkInstance.setLang('en');
+    </script>
+    ```
+  </CodeGroup>
+</ResponseField>
+
+<ResponseField
+  name="closeModal"
+  type="function(): void"
+>
+  É responsável por fechar o modal de [Face Index](/introduction).
+
+  Exemplo:
+
+  <CodeGroup>
+    ```html HTML
+    <div id="legitimuz-root"></div>
+    <script src="https://cdn.legitimuz.com/js/sdk/faceindex.js"></script>
+    <script type="text/javascript">
+      const sdkInstance = LegitimuzFaceIndex({
+        /* ...opções */
+      });
+
+      // Iniciar SDK
+      sdkInstance.mount();
+
+      // Fechar modal de verficação
+      sdkInstance.closeModal();
+    </script>
+    ```
+  </CodeGroup>
+</ResponseField>
+
+
+<ResponseField
+  name="changeFieldId"
+  type="function(params: Object): void"
+>
+  É responsável por alterar o [id](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes/id)
+  dos campos [enriquecidos](/sdk-reference/legitimuz/enrichment).
+
+  <Expandable title="params: Object">
+    <ResponseField name="fieldName"  type="string" required>
+      Nome do campo
+
+      [Clique aqui](/sdk-reference/legitimuz/fields) para ver os campos disponíveis
+    </ResponseField>
+    <ResponseField name="fieldId"  type="string" required>
+      Novo id do campo
+
+      Exemplo: `meu-id-customizado`
+    </ResponseField>
+  </Expandable>
+
+  Exemplo:
+
+  <CodeGroup>
+    ```html HTML
+    <div id="legitimuz-root"></div>
+    <script src="https://cdn.legitimuz.com/js/sdk/faceindex.js"></script>
+    <script type="text/javascript">
+      const sdkInstance = LegitimuzFaceIndex({
+        /* ...opções */
+      });
+
+      // Iniciar SDK
+      sdkInstance.mount();
+
+      // Alterar id do campo cpf
+      sdkInstance.changeFieldId({
+        fieldName: "cpf",
+        fieldId: "meu-id-customizado",
+      });
+    </script>
+    ```
+  </CodeGroup>
+</ResponseField>

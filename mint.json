@@ -56,7 +56,7 @@
       ]
     },
     {
-      "group": "Legitimuz SDK",
+      "group": "OCR + Liveness SDK",
       "pages": [
         "sdk-reference/legitimuz/introduction",
         "sdk-reference/legitimuz/instalation",
@@ -72,6 +72,17 @@
             "sdk-reference/legitimuz/address-enrichment"
           ]
         }
+      ]
+    },
+    {
+      "group": "Face Index SDK",
+      "pages": [
+        "sdk-reference/faceindex/introduction",
+        "sdk-reference/faceindex/instalation",
+        "sdk-reference/faceindex/options",
+        "sdk-reference/faceindex/methods",
+        "sdk-reference/faceindex/fields",
+        "sdk-reference/faceindex/actions"
       ]
     },
     {
