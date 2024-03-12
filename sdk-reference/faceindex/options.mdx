@@ -43,8 +43,6 @@ icon: 'sliders'
 </ResponseField>
 
 
-{/* Refatora essa parte de baixo */}
-
 <ResponseField
   name="onSuccess"
   type="function: (eventName: 'faceindex'): void"
@@ -139,7 +137,7 @@ icon: 'sliders'
 
       const handleOnLoadSDK = () => {
         sdkInstance.current = LegitimuzFaceIndex({
-          /* options */
+          /* opções */
           onError(eventName) {
             console.log(eventName); // faceindex
           },
