@@ -8,7 +8,7 @@ icon: 'bolt'
   name="mount"
   type="function(): void"
 >
-  É responsável por iniciar o SDK e deve ser chamado após a configuração
+  É responsável por montar o SDK e deve ser chamado após a configuração
 
   Exemplo:
 
@@ -20,7 +20,7 @@ icon: 'bolt'
       /* ...opções */
     });
 
-    // Iniciar SDK
+    // Montar SDK
     sdkInstance.mount();
   </script>
   ```
@@ -43,7 +43,7 @@ icon: 'bolt'
         /* ...opções */
       });
 
-      // Iniciar SDK
+      // Montar SDK
       sdkInstance.mount();
 
       // Alterar idioma
@@ -55,12 +55,12 @@ icon: 'bolt'
 
 <ResponseField
   name="changeFieldId"
-  type="function(params: Object): void"
+  type="function(params: object): void"
 >
   É responsável por alterar o [id](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes/id)
   dos campos [enriquecidos](/sdk-reference/legitimuz/enrichment)
 
-  <Expandable title="params: Object">
+  <Expandable title="params: object">
     <ResponseField name="fieldName"  type="string" required>
       Nome do campo
 
@@ -84,7 +84,7 @@ icon: 'bolt'
         /* ...opções */
       });
 
-      // Iniciar SDK
+      // Montar SDK
       sdkInstance.mount();
 
       // Alterar id do campo cpf
@@ -99,12 +99,12 @@ icon: 'bolt'
 
 <ResponseField
   name="changeActionId"
-  type="function(params: Object): void"
+  type="function(params: object): void"
 >
   É responsável por alterar o [id](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes/id)
   dos elementos que disparam as [ações](/sdk-reference/legitimuz/actions).
 
-  <Expandable title="params: Object">
+  <Expandable title="params: object">
     <ResponseField name="actionName"  type="string" required>
       Nome da ação
 
@@ -128,7 +128,7 @@ icon: 'bolt'
         /* ...opções */
       });
 
-      // Iniciar SDK
+      // Montar SDK
       sdkInstance.mount();
 
       // Alterar id do campo cpf
@@ -158,7 +158,7 @@ icon: 'bolt'
         /* ...opções */
       });
 
-      // Iniciar SDK
+      // Montar SDK
       sdkInstance.mount();
 
       // Fechar modal de verficação

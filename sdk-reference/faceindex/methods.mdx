@@ -8,7 +8,7 @@ icon: 'bolt'
   name="mount"
   type="function(): void"
 >
-  É responsável por iniciar o SDK e deve ser chamado após a configuração.
+  É responsável por montar o SDK e deve ser chamado após a configuração.
 
   Exemplo:
 
@@ -20,7 +20,7 @@ icon: 'bolt'
       /* ...opções */
     });
 
-    // Iniciar SDK
+    // Montar SDK
     sdkInstance.mount();
   </script>
   ```
@@ -43,7 +43,7 @@ icon: 'bolt'
         /* ...opções */
       });
 
-      // Iniciar SDK
+      // Montar SDK
       sdkInstance.mount();
 
       // Alterar idioma
@@ -70,7 +70,7 @@ icon: 'bolt'
         /* ...opções */
       });
 
-      // Iniciar SDK
+      // Montar SDK
       sdkInstance.mount();
 
       // Fechar modal de verficação
@@ -82,12 +82,12 @@ icon: 'bolt'
 
 <ResponseField
   name="changeFieldId"
-  type="function(params: Object): void"
+  type="function(params: object): void"
 >
   Alterar o [id](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes/id)
   do campo usado para extrair o CPF.
 
-  <Expandable title="params: Object">
+  <Expandable title="params: object">
     <ResponseField name="fieldName"  type="string" required>
       Nome do campo
 
@@ -111,7 +111,7 @@ icon: 'bolt'
         /* ...opções */
       });
 
-      // Iniciar SDK
+      // Montar SDK
       sdkInstance.mount();
 
       // Alterar id do campo cpf
@@ -126,11 +126,11 @@ icon: 'bolt'
 
 <ResponseField
   name="startFaceIndex"
-  type="function(params: Object): void"
+  type="function(params: object): void"
 >
   Iniciar o fluxo de [Face Index](/introduction) via javascript.
 
-  <Expandable title="params: Object">
+  <Expandable title="params: object">
     <ResponseField name="cpf"  type="string" required>
       CPF do usuário
 

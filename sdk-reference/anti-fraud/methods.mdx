@@ -1,0 +1,148 @@
+---
+title: "Métodos"
+description: "Vejá como customizar ainda mais o SDK"
+icon: "bolt"
+---
+
+<ResponseField
+  name="mount"
+  type="function(): void"
+>
+  É responsável por montar o SDK e deve ser chamado após a configuração
+
+  Exemplo:
+
+  ```html HTML
+  <script src="https://cdn.legitimuz.com/js/sdk/antifraude.js"></script>
+  <script type="text/javascript">
+    const sdkInstance = LegitimuzAntiFraude({
+      /* ...opções */
+    });
+
+    // Montar SDK
+    sdkInstance.mount();
+  </script>
+  ```
+</ResponseField>
+
+<ResponseField
+  name="changeActionId"
+  type="function(params: object): void"
+>
+  É responsável por alterar o [id](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes/id)
+  dos elementos que disparam as [ações](./actions).
+
+  <Expandable title="params: object">
+    <ResponseField name="actionName"  type="string" required>
+      Nome da ação
+
+      [Clique aqui](./actions) para ver os campos disponíveis
+    </ResponseField>
+    <ResponseField name="actionId"  type="string" required>
+      Novo id do elemento que dispara a ação
+
+      Exemplo: `meu-id-customizado`
+    </ResponseField>
+  </Expandable>
+
+  Exemplo:
+
+  <CodeGroup>
+    ```html HTML
+    <script src="https://cdn.legitimuz.com/js/sdk/antifraude.js"></script>
+    <script type="text/javascript">
+      const sdkInstance = LegitimuzAntiFraude({
+        /* ...opções */
+      });
+
+      // Montar SDK
+      sdkInstance.mount();
+
+      sdkInstance.changeActionId({
+        actionName: "send-analisys",
+        actionId: "meu-id-customizado",
+      });
+    </script>
+    ```
+  </CodeGroup>
+</ResponseField>
+
+<ResponseField
+  name="setAction"
+  type="function(action: signin | signup | withdraw | deposit): void"
+>
+  Alterar a [ação](./fields) execultada no envio dos dados.
+
+  <Expandable title="action: string">
+    <ResponseField name="signin" type="string">
+      Ação de login
+    </ResponseField>
+    <ResponseField name="signup" type="string">
+      Ação de cadastro
+    </ResponseField>
+    <ResponseField name="deposit" type="string">
+      Ação de depósito
+    </ResponseField>
+    <ResponseField name="withdraw" type="string">
+      Ação de saque
+    </ResponseField>
+  </Expandable>
+
+  Exemplo:
+
+  <CodeGroup>
+    ```html HTML
+    <script src="https://cdn.legitimuz.com/js/sdk/antifraude.js"></script>
+    <script type="text/javascript">
+      const sdkInstance = LegitimuzAntiFraude({
+        /* ...opções */,
+        action: 'signin'
+      });
+
+      // Montar SDK
+      sdkInstance.mount();
+
+      sdkInstance.setAction('deposit');
+    </script>
+    ```
+  </CodeGroup>
+</ResponseField>
+
+<ResponseField
+  name="sendAnalisys"
+  type="function(params: object): void"
+>
+  Enviar dados para análise.
+
+  <Expandable title="params: object">
+    <ResponseField name="cpf" type="string" required>
+      CPF do usuário
+
+      Exemplo: `123.456.789-10`
+    </ResponseField>
+    <ResponseField name="email" type="string">
+      Email do usuário
+
+      Exemplo: `mail@example.com`
+    </ResponseField>
+  </Expandable>
+
+  Exemplo:
+
+  <CodeGroup>
+    ```html HTML
+    <script src="https://cdn.legitimuz.com/js/sdk/antifraude.js"></script>
+    <script type="text/javascript">
+      const sdkInstance = LegitimuzAntiFraude({
+        /* ...opções */,
+        action: 'signup'
+      });
+
+      // Montar SDK
+      sdkInstance.mount();
+
+      sdkInstance.sendAnalisys({ cpf: '12345678910' });
+    </script>
+    ```
+  </CodeGroup>
+</ResponseField>

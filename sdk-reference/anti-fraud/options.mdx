@@ -1,0 +1,82 @@
+---
+title: "Opções"
+description: "Vejá como customizar ainda mais o SDK"
+icon: "sliders"
+---
+
+<ResponseField
+  name="apiURL"
+  type="string"
+  required
+>
+  É o endereço da Legitimuz API.
+
+Exemplo: `https://api.legitimuz.com`
+
+</ResponseField>
+
+<ResponseField name="token" type="string" required>
+  O token é o seu token de integração. Você pode gerar um token de integração na
+  página [integrações](https://dashboard.legitimuz.com/dashboard/integrations)
+  na aba de `instalação` do Dashboard Legitimuz.
+</ResponseField>
+
+<ResponseField
+  name="action"
+  type="string: signin | signup | withdraw | deposit"
+>
+  A ação que você deseja realizar.
+
+  As ações disponíveis são:
+
+  - `signin`: análise de dados a partir do login
+  - `signup`: análise de dados a partir do cadastro
+  - `withdraw`: análise de dados a partir de um saque
+  - `deposit`: análise de dados a partir de um depósito
+
+  Exemplos:
+
+  <CodeGroup>
+    ```html HTML
+    <script src="https://cdn.legitimuz.com/js/sdk/antifraude.js"></script>
+    <script type="text/javascript">
+      const sdkInstance = LegitimuzAntiFraude({
+        /* opções */
+        action: 'signin',
+      });
+
+      // Montar o SDK
+      sdkInstance.mount();
+    </script>
+    ```
+
+    ```jsx JSX
+    import { useRef } from 'react';
+
+    function Component() {
+      const sdkInstance = useRef(null);
+
+      const handleOnLoadSDK = () => {
+        sdkInstance.current = LegitimuzAntiFraude({
+          /* options */
+          action: 'signin',
+        });
+
+        // Montar o SDK
+        sdkInstance.current.mount();
+      }
+
+      return (
+        <>
+          <input id="legitimuz-hydrate-cpf" type="tel" />
+          <script
+            src="https://cdn.legitimuz.com/js/sdk/antifraude.js"
+            onLoad={handleOnLoadSDK}
+          ></script>
+        </>
+      );
+    }
+    ```
+
+  </CodeGroup>
+</ResponseField>

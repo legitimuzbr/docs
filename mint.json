@@ -65,7 +65,7 @@
         "sdk-reference/legitimuz/fields",
         "sdk-reference/legitimuz/actions",
         {
-          "group": "Serviços",
+          "group": "Mais informações",
           "pages": [
             "sdk-reference/legitimuz/ocr-facematch",
             "sdk-reference/legitimuz/enrichment",
@@ -83,6 +83,17 @@
         "sdk-reference/faceindex/methods",
         "sdk-reference/faceindex/fields",
         "sdk-reference/faceindex/actions"
+      ]
+    },
+    {
+      "group": "Anti Fraude SDK",
+      "pages": [
+        "sdk-reference/anti-fraud/introduction",
+        "sdk-reference/anti-fraud/instalation",
+        "sdk-reference/anti-fraud/options",
+        "sdk-reference/anti-fraud/methods",
+        "sdk-reference/anti-fraud/fields",
+        "sdk-reference/anti-fraud/actions"
       ]
     },
     {
