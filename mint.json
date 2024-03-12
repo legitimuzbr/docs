@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/schema.json",
   "name": "Legitimuz",
+  "favicon": "/assets/svg/favicon.svg",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/assets/svg/logo-dark.svg",
+    "light": "/assets/svg/logo-light.svg"
   },
-  "favicon": "/favicon.svg",
   "colors": {
     "primary": "#FF7F66",
     "light": "#FF7F66",
@@ -25,6 +25,9 @@
     "name": "Dashboard",
     "url": "https://dashboard.legitimuz.com/dashboard"
   },
+  "primaryTab": {
+    "name": "Documentação"
+  },
   "tabs": [
     {
       "name": "SDK Reference",
@@ -39,20 +42,7 @@
     {
       "group": "Introdução",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
-      ]
-    },
-    {
-      "group": "Essenciais",
-      "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "introduction"
       ]
     },
     {
